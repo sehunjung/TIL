@@ -19,6 +19,13 @@ result
 
 tomorrow
 
+    homebrew를 이용해서 mongoDB 설치 
+    --설치완료 
+    공식 홈 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+    한글블로그 http://romeoh78.blogspot.com/2015/03/macosx-mongodb.html
+    => 몽고디비 실행시 관리자 권한 필요 sudo mongod --dbpath /data/db 
+
+    설정은 따로 정리 
     윈도우 포맷, sourcetree, vscode, python 설치
     git hub clone
     jupyter, mongoDB 설치 + query

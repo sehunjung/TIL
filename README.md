@@ -2,16 +2,23 @@
 **Today I Learned**
 
 plan
+
     Git source tree 사용해서 github에 연결 
     폴더 생성해서 내부에 파일 추가 
     커밋, 푸쉬 (working, TIL)
+
 action
+
     Git source tree 사용해서 github에 연결 
     폴더 생성해서 내부에 파일 추가 
     커밋, 푸쉬 (working, TIL)
+
 result
+
     완료
+
 tomorrow
+
     윈도우 포맷, sourcetree, vscode, python 설치
     git hub clone
     jupyter, mongoDB 설치 + query

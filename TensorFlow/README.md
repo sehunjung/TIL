@@ -16,10 +16,9 @@ TF 기본구조
 2. make flow(graph) - 연산을 이용한 텐서의 흐름 정의
 3. create session -   sesssion.run
 4. result review - print
-그림 01
-![Alt text](TIL/TensorFlow/IMG/01 TF 기본구조.PNG)
-      
 
+![그림01](.TIL/TensorFlow/IMG/01 TF 기본구조.PNG)
+      
 
 rank.. -차원...3차원 4차원
 shape..-차원에 몇개의 열을 가지고 있나
@@ -31,7 +30,9 @@ https://www.python.org/downloads/release/python-366/ 에서 3.6.6 설치 필요
 vscode에서 컴파일러 변경하고 디버그 사용해서 실행하면 됨
 
 Linear regression - 모델 = 수학공식
-그림 02
+
+![그림02](.TIL/TensorFlow/IMG/02 linear regression cost.PNG)
+
 미분은 https://www.derivative-calculator.net/ 에 수식을 넣으면 계산해 줌
 
 

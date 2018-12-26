@@ -17,7 +17,7 @@ TF 기본구조
 3. create session -   sesssion.run
 4. result review - print
 
-!(.IMG/01_base.PNG,"기본구조")
+!(./IMG/01_base.PNG,"기본구조")
       
 rank.. -차원...3차원 4차원
 shape..-차원에 몇개의 열을 가지고 있나
@@ -30,7 +30,7 @@ vscode에서 컴파일러 변경하고 디버그 사용해서 실행하면 됨
 
 Linear regression - 모델 = 수학공식
 
-!(./IMG/02_linear_regression_cost.PNG. "선형회귀공식")
+!(./IMG/02_linear_regression_cost.PNG)
 
 미분은 https://www.derivative-calculator.net/ 에 수식을 넣으면 계산해 줌
 

@@ -17,6 +17,8 @@ TF 기본구조
 3. create session -   sesssion.run
 4. result review - print
 그림 01
+![Alt text](TIL/TensorFlow/IMG/01 TF 기본구조.PNG)
+      
 
 
 rank.. -차원...3차원 4차원

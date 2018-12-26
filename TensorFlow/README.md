@@ -17,11 +17,11 @@ TF 기본구조
 3. create session -   sesssion.run
 4. result review - print
 
-![기본구조](./IMG/01_base.PNG)
+![](./IMG/01_base.PNG)
       
-rank.. -차원...3차원 4차원
-shape..-차원에 몇개의 열을 가지고 있나
-type.. float32, int32를 많이 사용함.. 
+    rank.. -차원...3차원 4차원
+    shape..-차원에 몇개의 열을 가지고 있나
+    type.. float32, int32를 많이 사용함.. 
 
 cmd에서 설치 완료..VScode에서는 작동 안됨.
 https://www.python.org/downloads/release/python-366/ 에서 3.6.6 설치 필요
@@ -30,7 +30,7 @@ vscode에서 컴파일러 변경하고 디버그 사용해서 실행하면 됨
 
 Linear regression - 모델 = 수학공식
 
-![공식](./IMG/02_linear_regression_cost.PNG)
+![](./IMG/02_linear_regression_cost.PNG)
 
 미분은 https://www.derivative-calculator.net/ 에 수식을 넣으면 계산해 줌
 

@@ -34,9 +34,12 @@ vscode에서 컴파일러 변경하고 디버그 사용해서 실행하면 됨
 설치시마다 종료후 재시작 해야 import 인식함 
 
 
-Linear regression - 모델 = 수학공식
+Linear regression - 모델 = 수학공식을 코드로.
 
 ![](./IMG/02_linear_regression_cost.PNG)
+
+cost의 가중치 W는 학습할수록 최소값으로 업데이트됨 \
+TF 옵티마이져 로직에서 자동 처리
 
 미분은 https://www.derivative-calculator.net/ 에 수식을 넣으면 계산해 줌
 
@@ -51,3 +54,46 @@ Linear regression - 모델 = 수학공식
 
 1. 행 => 인스턴스 
 2. 열 => variable/feature의 갯수....
+3. 인스턴스가 많아도 weight는 하나임..
+
+---
+
+![](./IMG/05_matrix_shape.jpg)
+데이터, weight, 결과 3개의 shape를 이해해야 함
+1. 데이터, 결관는 shape 정해져 있음
+2. weight의 shape 정의 필요
+
+
+---
+logistic classification
+
+선형회귀에서 확장..예상 결과치에 sigmoid 함수를 적용
+
+    H(x) = XW
+
+![](./IMG/06_sigmoid(matrix).jpg) 
+tf의 계산 펑션을 그대로 사용.
+
+![](./IMG/07_min_cost.jpg) 
+
+1. 실제 y와 예산 H(x)의 차이의 최소화.
+2. 실제는 0과 1 둘중 하나이므로 두가지 케이스를 로그적용
+
+![](./IMG/08_cost_final.jpg) 
+Y가 0,1 두가지 조건을 하나의 수식으로 표현
+
+![](./IMG/09_final_tf.jpg)
+tf code로 수식을 그대로 변환
+이후 미분, 학습은 tf 표준코드 사용
+
+
+---
+
+multinomial -> softmax logistic regression
+
+
+
+
+
+
+

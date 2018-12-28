@@ -68,7 +68,7 @@ TF 기본구조
     1. 데이터(x), 결과(y)는 shape 정해져 있음
     2. weight의 shape 정의 필요
 
-![](./IMG/05_01_weight_shape.jpg)
+![](./IMG/05_01_weight_shape.JPG)
 
 # 3. logistic(sigmoid) classification - 결과의 범위를 지정
 
@@ -78,19 +78,19 @@ TF 기본구조
     hypothesis = tf.sigmoid(tf.matmul(X, W) + b)
     
 
-![](./IMG/06_sigmoid(matrix).jpg) 
+![](./IMG/06_sigmoid(matrix).JPG) 
 
-![](./IMG/07_min_cost.jpg) 
+![](./IMG/07_min_cost.JPG) 
 
 
     실제 y와 예산 H(x)의 차이의 최소화.
     실제는 0과 1 둘중 하나이므로 두가지 케이스를 로그적용
 
-![](./IMG/08_cost_final.jpg) 
+![](./IMG/08_cost_final.JPG) 
 
     Y가 0,1 두가지 조건을 하나의 수식으로 표현
 
-![](./IMG/09_final_tf.jpg)
+![](./IMG/09_final_tf.JPG)
 
     tf code로 수식을 그대로 변환
     이후 미분, 학습은 tf 표준코드 사용
@@ -100,17 +100,17 @@ TF 기본구조
 >결과가 1, 0이 아닌 여러가지 선택지를 가지는 경우
 메트릭스 연산으로 각각의 확율이 계산됨
 
-![](./IMG/10_softmax_01.jpg)    
+![](./IMG/10_softmax_01.JPG)    
 
     sigmoid를 시키면 0~1 사이의 값이됨
     softmax를 시키면 0~1 사이, 합이 1이 됨
     hypothesis = tf.nn.softmax(tf.matmul(X,W)+b)
 
-![](./IMG/10_softmax_02.jpg)    
+![](./IMG/10_softmax_02.JPG)    
 
     one-hot encoding을 하면 하나의 값으로 귀결됨
 
-![](./IMG/10_softmax_03.jpg)  
+![](./IMG/10_softmax_03.JPG)  
 
     softmax_cross_entropy_with_logits 를 사용하면
     hypothsis와 logit으로 분리해서 사용

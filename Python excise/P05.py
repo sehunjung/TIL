@@ -2,7 +2,7 @@
 
 count = 0
 isNum = 0
-avg = 0
+avg = 0.0
 total = 0
 
 maxium = -1
@@ -16,7 +16,7 @@ while True:
         break
     else:
         try:
-            isNum = float(number)
+            isNum = int(number)
         except:
             print("Error, please enter numeric input")
             print("Try again")
@@ -26,8 +26,12 @@ while True:
 
     if isNum > maxium:
         maxium = isNum
-    if isNum < minimum:  #????
-        manimium = isNum
+
+    if minimum == None: 
+        minimum = isNum
+    elif isNum < minimum:
+        minimum = isNum
+
 
 if total > 0 and count > 0:
     avg = total/count

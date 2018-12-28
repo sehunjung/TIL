@@ -40,7 +40,7 @@ TF 기본구조
     설치시마다 종료후 재시작 해야 import 인식함 - 개선 필요
 
 
-1. Linear regression - Feature가 1개.
+# 1. Linear regression - Feature가 1개.
 
 ![](./IMG/02_linear_regression_cost.PNG)
 
@@ -49,8 +49,7 @@ TF 기본구조
 
     미분은 https://www.derivative-calculator.net/ 에 수식을 넣으면 미분식을 변환해 줌
 
----
-2. multi-variable linear regression - Feature 가 여러개
+# 2. multi-variable linear regression - Feature 가 여러개
 
     - 무식하게 처리 가능..
 ![](./IMG/03_multi_vars.jpg)
@@ -72,8 +71,7 @@ TF 기본구조
 
 ![](./IMG/05_01_weight_shape.jpg)
 
----
-3. logistic(sigmoid) classification - 결과의 범위를 지정
+# 3. logistic(sigmoid) classification - 결과의 범위를 지정
 
     평균치 보다 큰 데이터가 들어오는 경우 결과가 왜곡됨.
 
@@ -95,26 +93,24 @@ TF 기본구조
     tf code로 수식을 그대로 변환
     이후 미분, 학습은 tf 표준코드 사용
 
----
-
-4. multinomial(softmax logistic) regression
+# 4. multinomial(softmax logistic) regression
 
     - 결과가 1, 0이 아닌 여러가지 선택지를 가지는 경우
     - 메트릭스 연산으로 각각의 확율이 계산됨
-    ![](./IMG/10_softmax_01.jpg)    
+![](./IMG/10_softmax_01.jpg)    
     - sigmoid를 시키면 0~1 사이의 값이됨
     - softmax를 시키면 0~1 사이, 합이 1이 됨
     - hypothesis = tf.nn.softmax(tf.matmul(X,W)+b)
-    ![](./IMG/10_softmax_02.jpg)    
+![](./IMG/10_softmax_02.jpg)    
     - one-hot encoding을 하면 하나의 값으로 귀결됨
-    ![](./IMG/10_softmax_03.jpg)  
+![](./IMG/10_softmax_03.jpg)  
 
     - softmax_cross_entropy_with_logits 를 사용하면 \
     hypothsis와 logit으로 분리해서 사용
 
     - tf api 참조 https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221164668953&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 
-    
+
 
 
 

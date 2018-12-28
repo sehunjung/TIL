@@ -60,12 +60,10 @@ TF 기본구조
 
 ![](./IMG/04_matrix.jpg)
 
+    행 => 인스턴스 
+    열 => variable/feature의 갯수....
+    인스턴스가 많아도 weight는 하나임..
 
-    1. 행 => 인스턴스 
-    2. 열 => variable/feature의 갯수....
-    3. 인스턴스가 많아도 weight는 하나임..
-
-<!-- ![](./IMG/05_matrix_shape.jpg) -->
     데이터, weight, 결과 3개의 shape를 이해해야 함
     1. 데이터(x), 결과(y)는 shape 정해져 있음
     2. weight의 shape 정의 필요
@@ -84,6 +82,7 @@ TF 기본구조
 
 ![](./IMG/07_min_cost.jpg) 
 
+
     실제 y와 예산 H(x)의 차이의 최소화.
     실제는 0과 1 둘중 하나이므로 두가지 케이스를 로그적용
 
@@ -98,8 +97,8 @@ TF 기본구조
 
 # 4. multinomial(softmax logistic) regression
 
-    결과가 1, 0이 아닌 여러가지 선택지를 가지는 경우
-    메트릭스 연산으로 각각의 확율이 계산됨
+>결과가 1, 0이 아닌 여러가지 선택지를 가지는 경우
+메트릭스 연산으로 각각의 확율이 계산됨
 
 ![](./IMG/10_softmax_01.jpg)    
 

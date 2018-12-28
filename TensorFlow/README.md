@@ -33,8 +33,8 @@ TF 기본구조
     cmd에서 설치 완료..VScode에서는 작동 안됨.
     https://www.python.org/downloads/release/python-366/ 에서 3.6.6 설치 필요
 
-    -python3.6 -m pip install tensorflow
-    ㅡmac os : sudo python3.6 -m pip install --upgrade tensorflow, sudo python3.6 -m pip install --upgrade matplotlib
+    - python3.6 -m pip install tensorflow
+    - mac os : sudo python3.6 -m pip install --upgrade tensorflow, sudo python3.6 -m pip install --upgrade matplotlib
 
     vscode에서 컴파일러 변경하고 디버그 사용해서 실행하면 됨
     설치시마다 종료후 재시작 해야 import 인식함 - 개선 필요
@@ -44,18 +44,19 @@ TF 기본구조
 
 ![](./IMG/02_linear_regression_cost.PNG)
 
-    cost의 가중치 W는 학습할수록 최소값으로 업데이트됨 \
+    cost의 가중치 W는 학습할수록 최소값으로 업데이트됨
     TF 옵티마이져 로직에서 자동 처리
 
     미분은 https://www.derivative-calculator.net/ 에 수식을 넣으면 미분식을 변환해 줌
 
 # 2. multi-variable linear regression - Feature 가 여러개
 
-    - 무식하게 처리 가능..
+    무식하게 처리 가능..
+
 ![](./IMG/03_multi_vars.jpg)
  
-    - 메트릭스로 하나의 수식으로 해결 가능 
-    - hypothesis = tf.matmul(X, W) + b
+    메트릭스로 하나의 수식으로 해결 가능 
+    hypothesis = tf.matmul(X, W) + b
 
 ![](./IMG/04_matrix.jpg)
 
@@ -75,40 +76,47 @@ TF 기본구조
 
     평균치 보다 큰 데이터가 들어오는 경우 결과가 왜곡됨.
 
-    - 예상 결과치에 sigmoid 함수를 적용
-    - hypothesis = tf.sigmoid(tf.matmul(X, W) + b)
+    예상 결과치에 sigmoid 함수를 적용
+    hypothesis = tf.sigmoid(tf.matmul(X, W) + b)
     
 
 ![](./IMG/06_sigmoid(matrix).jpg) 
 
 ![](./IMG/07_min_cost.jpg) 
 
-    1. 실제 y와 예산 H(x)의 차이의 최소화.
-    2. 실제는 0과 1 둘중 하나이므로 두가지 케이스를 로그적용
+    실제 y와 예산 H(x)의 차이의 최소화.
+    실제는 0과 1 둘중 하나이므로 두가지 케이스를 로그적용
 
 ![](./IMG/08_cost_final.jpg) 
+
     Y가 0,1 두가지 조건을 하나의 수식으로 표현
 
 ![](./IMG/09_final_tf.jpg)
+
     tf code로 수식을 그대로 변환
     이후 미분, 학습은 tf 표준코드 사용
 
 # 4. multinomial(softmax logistic) regression
 
-    - 결과가 1, 0이 아닌 여러가지 선택지를 가지는 경우
-    - 메트릭스 연산으로 각각의 확율이 계산됨
+    결과가 1, 0이 아닌 여러가지 선택지를 가지는 경우
+    메트릭스 연산으로 각각의 확율이 계산됨
+
 ![](./IMG/10_softmax_01.jpg)    
-    - sigmoid를 시키면 0~1 사이의 값이됨
-    - softmax를 시키면 0~1 사이, 합이 1이 됨
-    - hypothesis = tf.nn.softmax(tf.matmul(X,W)+b)
+
+    sigmoid를 시키면 0~1 사이의 값이됨
+    softmax를 시키면 0~1 사이, 합이 1이 됨
+    hypothesis = tf.nn.softmax(tf.matmul(X,W)+b)
+
 ![](./IMG/10_softmax_02.jpg)    
-    - one-hot encoding을 하면 하나의 값으로 귀결됨
+
+    one-hot encoding을 하면 하나의 값으로 귀결됨
+
 ![](./IMG/10_softmax_03.jpg)  
 
-    - softmax_cross_entropy_with_logits 를 사용하면 \
+    softmax_cross_entropy_with_logits 를 사용하면
     hypothsis와 logit으로 분리해서 사용
 
-    - tf api 참조 https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221164668953&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+    tf api 참조 https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221164668953&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 
 
 

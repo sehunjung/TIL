@@ -118,7 +118,26 @@ TF 기본구조
     tf api 참조 https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221164668953&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 
 
+# 5. ML 실용 팁
 
+learning rate 적용
+- 정답이 없음 보통 0.01 부터 위아래로 순차적으로 적용 해서 정확도 확인 함
+
+평준화..일반화 - data Preporcessing
+- 데이터의 값이 너무 편차가 심할때 사용(0~1 사이값으로 조정)
+- MinMaxScaler(xy) 주로 사용함
+
+epoch/batch
+- epoch : 모든 트레이닝 데이터를 한번 학습한 단위
+- batch : 한번에 메모리에 올릴 트레이닝 데이터 셋의 단위
+- iterations : 반복 횟수
+- ex> 1000개의 데이터가 있고 한번에 500개씩 학습하면 2번의 반복으로 1번이 epoch 가 완료됨
+
+
+# 6. Deep Learning..
+
+shape, rank, Axis
+shape를 유의해서..matmul을 사용
 
 
 

@@ -122,8 +122,9 @@ TF 기본구조
 
 learning rate 적용
 - 정답이 없음 보통 0.01 부터 위아래로 순차적으로 적용 해서 정확도 확인 함
+- overfitting
 
-평준화..일반화 - data Preporcessing
+평준화..일반화(Regularzation) - data Preporcessing
 - 데이터의 값이 너무 편차가 심할때 사용(0~1 사이값으로 조정)
 - MinMaxScaler(xy) 주로 사용함
 
@@ -138,6 +139,35 @@ epoch/batch
 
 shape, rank, Axis
 shape를 유의해서..matmul을 사용
+
+
+# XOR 해결 + CNN
+
+Neural Net으로 해결 
+Back propagation => 편미분 + chain Rule 적용
+Convolutional Neural Networks(CNN)
+
+NN의 출력 => Activate function
+deep : 계층을 여러개 / wide : 계층 끼리 연결되는 출력을 넓게
+sigmoid에서 ReLU(Rectified Linear Unit) 로 진화
+
+intial weight => Xavier initialization
+
+dropout => 일부 넷을 비활성화(학습시만)
+
+ensemble(앙상블) => 여러개의 학습모델을 동시에 학습해서 하나로 통합
+
+Stride 샘츨 추출 이동 단위??
+zeropad board => 가장자리 인식을위한 가상 위치
+
+Convolution layers(CONV, ReLU) 
+
+Pooling layer (sampling) => 각영역 최대값만 추출
+
+# RNN - Recurrent Neural Network
+
+
+
 
 
 

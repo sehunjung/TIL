@@ -17,3 +17,15 @@ Qualtrics https://www.qualtrics.com/customer-experience/
 
 ---
 
+# 멋쟁이 사자처럼
+
+서울에서 사무실을 운영하는 비용으로 세계여행을 하면서 프로젝트를 진행한다??!!
+비용은 맞추면 어케어케 되겠지만...
+가장 중요한 안전, 그리고 서울에서 만큼의 업무효율 유지는???
+
+멋진 프로젝트다..https://brunch.co.kr/@likelion#info \
+Like Lion https://likelion.net/ \
+facebook https://www.facebook.com/likelion.net/
+
+---
+

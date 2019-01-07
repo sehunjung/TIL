@@ -166,6 +166,14 @@ Pooling layer (sampling) => 각영역 최대값만 추출
 
 # RNN - Recurrent Neural Network
 
+sequence data 처리를 위해 개발(CNN의 한계) \
+연속된 데이터의 앞뒤 관계를 이해한다(time series)\
+usually want to predict a vector at some time steps \
+(Vanilla) Recurrent NN 이라고도 함 - 기본 RNN을  의미 \
+
+대표적 RNN 
+- LSTM(Long Short Term Memory) 
+- GRU
 
 
 

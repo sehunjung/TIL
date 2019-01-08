@@ -2,10 +2,7 @@ Study & book list
 ---
 
 빅데이터 엔지니어링 및 분석
-- 주제 : 빅데이터 엔지니어링 / 분석
-- 키워드 : 스칼라, 스파크, 하둡, 머신러닝
-- 진행 : hangout 및 매달 정기 모임 (평일 저녁)
-- 인원 : 5 ~ 10명
+
 - 참고도서 : 
 1) 스칼라와 머신러닝 (http://www.yes24.com/24/goods/66913770 )
 2) 밑바닥부터 시작하는 데이터 과학 (http://www.yes24.com/24/goods/27951467 )
@@ -19,6 +16,14 @@ http://www.hanbit.co.kr/store/books/look.php?p_code=B8585882565&fbclid=IwAR0fHT3
 ---
 파이썬 기초\
 https://docs.google.com/document/d/12zpo8JNrfE4V6PA9PQW426wIziZcbnPtjNo0OibaXfk/edit#
+
+
+인생을 짧아요, 엑셀대신 파이썬 \
+https://github.com/FinanceData/Life-is-short
+
+
+파이썬 자동화 - 템플릿 매칭 - 기업은행 공인인증서 \
+https://nbviewer.jupyter.org/gist/FinanceData/8b14a20e080797d2278d1f2e6a9cf13f
 
 
 파이썬으로 배우는 알고리즘 트레이딩 
@@ -57,11 +62,11 @@ https://tykimos.github.io/2019/12/31/2019_1st_ML_month_with_KaKR/?fbclid=IwAR3TI
 
 
 ---
-엑셀대신 파이썬
-> 업무자동화
+인공지능을 위한 수학 - 꼭 필요한 것만 골라 배우는 인공지능 맞춤 수학 \
+http://www.yes24.com/24/goods/66913718
 
-https://github.com/FinanceData/Life-is-short?fbclid=IwAR0aoHJJriJFrlzCtUxjl8390xtKIQE8h_eCM2OuOfICUAlHQCOZWyR0t8w
-
+Deep Learning Cookbook, Douwe Osigna \
+http://www.yes24.com/24/goods/68385763?scode=032&OzSrank=1
 
 ---
 CS231n 한글번역 - CNN 강의

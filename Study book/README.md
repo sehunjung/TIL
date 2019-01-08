@@ -13,6 +13,9 @@ Study & book list
 4) 하이 퍼포먼스 스파크 (http://www.yes24.com/24/goods/61112955 )
 5) 빅데이터 전문가의 하둡 관리 (http://www.yes24.com/24/goods/66586271 )
 
+데이터 분석을 위한 SQL 레시피\
+http://www.hanbit.co.kr/store/books/look.php?p_code=B8585882565&fbclid=IwAR0fHT3H4EOD8OzBapACr3e0SN-fVbjIUZ5NhvzfpZcOeNTaDdZYg-hAt4s
+
 ---
 파이썬 기초\
 https://docs.google.com/document/d/12zpo8JNrfE4V6PA9PQW426wIziZcbnPtjNo0OibaXfk/edit#
@@ -37,6 +40,9 @@ https://www.facebook.com/zzsza/posts/1657991877635881
 
 
 러닝 스파크 http://www.yes24.com/24/Goods/21667835?Acode=101&fbclid=IwAR3LcKjq06WjkbPlzi9hL4CSeePiyreJOWBPJ8JiOQdYyhX8IMS2W8yv9HU
+
+빅데이터 분석을 위한 스파크 2 프로그래밍\
+http://wikibook.co.kr/spark/
 
 Programming in Scala (한국어판)
 

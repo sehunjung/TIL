@@ -35,6 +35,14 @@ https://nbviewer.jupyter.org/gist/FinanceData/8b14a20e080797d2278d1f2e6a9cf13f
 - 기초 파이썬 웹 프로그래밍(http://www.yes24.com/24/Goods/63503495?Acode=101)ㄴ
 - 실전 파이썬 웹 프로그래밍, 실전편(http://www.yes24.com/24/Goods/29331035?Acode=101)
 
+python data visualization \
+https://towardsdatascience.com/the-next-level-of-data-visualization-in-python-dd6e99039d5e?fbclid=IwAR0VDMg-xyo1spBrDspidQqrOw-f12Q1oBOOZCHQoC7SMkAqyQ_Sa8eK95M \
+https://github.com/WillKoehrsen/Data-Analysis?fbclid=IwAR0Sk9iUIGBQaTZEQDrZz68W-1jZQu9lVTpXzdO_bYw186V5oOnMJ2JIvCc
+
+각종 그리드 솔루션 정리 (무료/상용(국산/외산))\
+https://okky.kr/article/538535
+
+
 ---
 
 테스트 주도 개발로 배우는 객체 지향 설계와 실천 [스티브 프리먼, 냇 프라이스]

@@ -14,8 +14,11 @@ Study & book list
 http://www.hanbit.co.kr/store/books/look.php?p_code=B8585882565&fbclid=IwAR0fHT3H4EOD8OzBapACr3e0SN-fVbjIUZ5NhvzfpZcOeNTaDdZYg-hAt4s
 
 ---
-파이썬 기초\
+파이썬 기초 \
 https://docs.google.com/document/d/12zpo8JNrfE4V6PA9PQW426wIziZcbnPtjNo0OibaXfk/edit#
+
+밑바닥부터 시작하는 딥런닝 \
+http://www.yes24.com/24/Goods/34970929?Acode=101 
 
 
 인생을 짧아요, 엑셀대신 파이썬 \

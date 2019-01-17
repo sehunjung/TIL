@@ -40,33 +40,40 @@ TF 기본구조
     설치시마다 종료후 재시작 해야 import 인식함 - 개선 필요
 
 
-# 1. Linear regression - Feature가 1개.
+# 1. Linear regression - Feature 1개.
 
 ![](./IMG/02_linear_regression_cost.PNG)
 
-    cost의 가중치 W는 학습할수록 최소값으로 업데이트됨
+    h(x) = wx + b : 2차원상의 임의의 선
+    cost = h(x) - y   : h(x) 예측,y 실제 값(Label)
+    예측과 실제의 차이가(cost) 최소로 나오게  w, b를 업데이트.
+
+    gradient descent algorithm을 사용해서
+    cost(loss: 실제와 가설의 차이)의 가중치 W는 학습할수록 최소값으로 업데이트됨(b는 상수이므로 일단 무시)
+
     TF 옵티마이져 로직에서 자동 처리
 
     미분은 https://www.derivative-calculator.net/ 에 수식을 넣으면 미분식을 변환해 줌
 
 # 2. multi-variable linear regression - Feature 가 여러개
 
-    무식하게 처리 가능..
+    무식하게 나열하면서 처리 가능..
 
 ![](./IMG/03_multi_vars.jpg)
  
-    메트릭스로 하나의 수식으로 해결 가능 
+    메트릭스로 하나의 수식으로 표현 가능 => 행렬의 곱
     hypothesis = tf.matmul(X, W) + b
 
 ![](./IMG/04_matrix.jpg)
 
     행 => 인스턴스 
     열 => variable/feature의 갯수....
-    인스턴스가 많아도 weight는 하나임..
+    인스턴스가 많아도 weight는 하나의 열(Label)임..
 
     데이터, weight, 결과 3개의 shape를 이해해야 함
-    1. 데이터(x), 결과(y)는 shape 정해져 있음
-    2. weight의 shape 정의 필요
+    1. 데이터(x), 결과(y)는 shape 정해져 있음 - 학습데이터
+    2. weight의 shape 확인 필요
+    - [n, 3] [?, ?] [n, 2] => weight [3,2]
 
 ![](./IMG/05_01_weight_shape.JPG)
 
@@ -74,14 +81,13 @@ TF 기본구조
 
     평균치 보다 큰 데이터가 들어오는 경우 결과가 왜곡됨.
 
-    예상 결과치에 sigmoid 함수를 적용
+    예상 결과치에 sigmoid 함수를 적용(0과 1사이의 값으로 변환)
     hypothesis = tf.sigmoid(tf.matmul(X, W) + b)
+    h가 변경되었으므로 W도 변경되어 져야 함.
     
-
 ![](./IMG/06_sigmoid(matrix).JPG) 
 
 ![](./IMG/07_min_cost.JPG) 
-
 
     실제 y와 예산 H(x)의 차이의 최소화.
     실제는 0과 1 둘중 하나이므로 두가지 케이스를 로그적용
@@ -94,17 +100,27 @@ TF 기본구조
 
     tf code로 수식을 그대로 변환
     이후 미분, 학습은 tf 표준코드 사용
+    
+    hy 예측 공식을 먼저 만듬
+    예측과 결과(Y)의 최소화 공식(cost)을 만듬
+    공식(cost)를 반복 학습하여 최소의 W를 구함 - 미분
+    예상이 0.5 이상이면 참 아니면 거짓
+
 
 # 4. multinomial(softmax logistic) regression
 
->결과가 1, 0이 아닌 여러가지 선택지를 가지는 경우
+결과가 1, 0이 아닌 여러가지 선택지를 가지는 경우
 메트릭스 연산으로 각각의 확율이 계산됨
 
 ![](./IMG/10_softmax_01.JPG)    
 
+    각각을 행렬곱으로 계산 함.
     sigmoid를 시키면 0~1 사이의 값이됨
-    softmax를 시키면 0~1 사이, 합이 1이 됨
+    softmax를 시키면 0~1 사이 이면서 합이 1이 됨
     hypothesis = tf.nn.softmax(tf.matmul(X,W)+b)
+
+    one-hot ending (값이 가장 큰 항목을 1 나머지는 0 )
+    
 
 ![](./IMG/10_softmax_02.JPG)    
 
@@ -124,9 +140,17 @@ learning rate 적용
 - 정답이 없음 보통 0.01 부터 위아래로 순차적으로 적용 해서 정확도 확인 함
 - overfitting
 
-평준화..일반화(Regularzation) - data Preporcessing
+평준화(standarzation) - data Preporcessing
 - 데이터의 값이 너무 편차가 심할때 사용(0~1 사이값으로 조정)
 - MinMaxScaler(xy) 주로 사용함
+
+일반화(Regularzation)
+- W의 값이 너무 크지 않도록 조정
+- regularzation strength를 사용
+
+온라인 러닝.
+- 데이터 셋을 계속 가져와서 이전 학습 내용을 기억하고 새 데이터로 이전 학습에 더해서 학습
+
 
 epoch/batch
 - epoch : 모든 트레이닝 데이터를 한번 학습한 단위

@@ -39,6 +39,9 @@ http://www.yes24.com/24/goods/65050162?scode=032&OzSrank=1
 파이썬으로 데이터 주무르기 독특한 예제를 통해 배우는 데이터 분석 입문\
 http://www.yes24.com/24/Goods/57670268?Acode=101
 
+파이썬 라이브러리를 활용한 머신러닝 사이킷런 핵심 개발자가 쓴 머신러닝 - 케글추천 \
+http://www.yes24.com/24/Goods/42806875
+
 
 파이썬 웹 프로그래밍(django)
 - 기초 파이썬 웹 프로그래밍(http://www.yes24.com/24/Goods/63503495?Acode=101)

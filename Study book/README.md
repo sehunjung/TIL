@@ -36,6 +36,10 @@ https://wikidocs.net/book/110
 케라스 창시자에게 배우는 딥러닝 - python \
 http://www.yes24.com/24/goods/65050162?scode=032&OzSrank=1
 
+파이썬으로 데이터 주무르기 독특한 예제를 통해 배우는 데이터 분석 입문\
+http://www.yes24.com/24/Goods/57670268?Acode=101
+
+
 파이썬 웹 프로그래밍(django)
 - 기초 파이썬 웹 프로그래밍(http://www.yes24.com/24/Goods/63503495?Acode=101)
 - 실전 파이썬 웹 프로그래밍, 실전편(http://www.yes24.com/24/Goods/29331035?Acode=101)

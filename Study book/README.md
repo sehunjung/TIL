@@ -106,3 +106,10 @@ Korean Subtitles for CS231n Spring 2017 \
 https://github.com/insurgent92/CS231N_17_KOR_SUB?fbclid=IwAR3_YZ6_Z9_qnd9y3xU8DcvIHcX3joQxL3np0Vxg9b9PPE-z8KFnvHM-gCM
 
 
+---
+시계열 DB & 시각화 \
+InfluxDB \
+https://hamait.tistory.com/440 \
+Grafana \
+https://hyunki1019.tistory.com/128 \
+

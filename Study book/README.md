@@ -89,8 +89,8 @@ http://www.yes24.com/24/goods/49867702?scode=032&OzSrank=4
 
 
 코랩 구글드라이브 파일 연결 \
-https://colab.research.google.com/
-https://tykimos.github.io/2019/01/22/colab_getting_started/\
+https://colab.research.google.com/\
+https://tykimos.github.io/2019/01/22/colab_getting_started/
 
 ---
 인공지능을 위한 수학 - 꼭 필요한 것만 골라 배우는 인공지능 맞춤 수학 \

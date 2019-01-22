@@ -88,8 +88,8 @@ https://tykimos.github.io/2019/12/31/2019_1st_ML_month_with_KaKR/?fbclid=IwAR3TI
 http://www.yes24.com/24/goods/49867702?scode=032&OzSrank=4
 
 
-코랩 구글드라이브 파일 연결 \
-https://colab.research.google.com/\
+코랩 구글드라이브 파일 연결\
+https://colab.research.google.com/
 https://tykimos.github.io/2019/01/22/colab_getting_started/
 
 ---

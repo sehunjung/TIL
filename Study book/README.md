@@ -73,6 +73,9 @@ https://www.facebook.com/zzsza/posts/1657991877635881
 빅데이터 분석을 위한 스파크 2 프로그래밍\
 http://wikibook.co.kr/spark/
 
+빅데이터 분석을 위한 스칼라와 스파크-대용량 빅데이터 분석과 머신 러닝까지 활용하는\
+http://www.yes24.com/24/Goods/67465425?Acode=101
+
 Programming in Scala (한국어판)
 
 SPARK 참고\

@@ -15,13 +15,13 @@ sns.set(font_scale=2.5)
 import warnings
 warnings.filterwarnings('ignore')
 
-# %matplotlib inline
 
 x_train = [1,2,3,4,5,6,7,8,9]
 x_label = [1,2,3,4,5,6,7,8,9]
 
 one_hot_x_train = to_categorical(x_train)
 one_hot_x_label = to_categorical(x_label)
+
 
 x_val = one_hot_x_train[:3]
 partial_x_train = one_hot_x_train[3:]
@@ -43,9 +43,11 @@ model.add(layers.Dense(10, activation='softmax'))
 
 model.summary()
 
+
 model.compile(optimizer='rmsprop',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
+
 
 history = model.fit(partial_x_train,
                     partial_x_label,
@@ -53,6 +55,7 @@ history = model.fit(partial_x_train,
                     batch_size=128,
                     validation_data=(x_val, y_val),
                     verbose=0)
+
 
 hists = [history]
 hist_df = pd.concat([pd.DataFrame(hist.history) for hist in hists])
@@ -73,5 +76,4 @@ ax[1].set_ylabel('loss')
 ax[1].set_xlabel('Epoch')
 ax[1].grid()
 ax[1].legend(loc=0)
-# fig.savefig('hist.png', dpi=300)
 plt.show()

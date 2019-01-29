@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import seaborn as sns
+from keras.layers.core import Dense, Dropout
 
 plt.style.use('seaborn')
 sns.set(font_scale=2.5)
@@ -15,65 +16,95 @@ sns.set(font_scale=2.5)
 import warnings
 warnings.filterwarnings('ignore')
 
+# type 변경을 몰라서 입력을 float으로  입력
+x_train = np.array([1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0])
+x_target = np.array([1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0])
 
-x_train = [1,2,3,4,5,6,7,8,9]
-x_label = [1,2,3,4,5,6,7,8,9]
+mean = x_train.mean(axis=0)
+x_train -= mean
+std = x_train.std(axis=0)
+x_train /= std
 
-one_hot_x_train = to_categorical(x_train)
-one_hot_x_label = to_categorical(x_label)
+x_target -= mean
+x_target /= std
 
+# print(x_target.shape)
+# print(x_target)
 
-x_val = one_hot_x_train[:3]
-partial_x_train = one_hot_x_train[3:]
+k = 4
+num_val_samples = len(x_train) // k
+for i in range(k):
+    print('processing fold', i)
+    val_data = x_train[i * num_val_samples: (i+1)*num_val_samples]
+    val_target = x_target[i * num_val_samples: (i+1)*num_val_samples]
 
-y_val = one_hot_x_label[:3]
-partial_x_label = one_hot_x_label[3:]
+    partial_train_data = np.concatenate(
+        [x_train[:i * num_val_samples],
+        x_train[(i+1) * num_val_samples:]], axis = 0)
 
-from keras.layers.core import Dense, Dropout
+    partial_train_target = np.concatenate(
+        [x_target[:i * num_val_samples],
+        x_target[(i+1) * num_val_samples:]],axis = 0) 
+
+# print(val_data.shape)
+# print(val_data)
+# print(val_target.shape)
+# print(val_target)
+
+# print(partial_train_data.shape)
+# print(partial_train_data)
+# print(partial_train_target.shape)
+# print(partial_train_target)
+
 
 model = models.Sequential()
-model.add(layers.Dense(32, activation='relu', input_shape=(10,)))
+# model.add(layers.Dense(64, activation='relu', input_shape=(9,)))
+model.add(layers.Dense(64, activation='relu', input_shape=(1,)))
 model.add(Dropout(0.2))
 model.add(layers.Dense(64, activation='relu'))
 model.add(Dropout(0.2))
-model.add(layers.Dense(10, activation='relu'))
-model.add(Dropout(0.2))
-
-model.add(layers.Dense(10, activation='softmax'))
-
+model.add(layers.Dense(1))
 model.summary()
 
-
 model.compile(optimizer='rmsprop',
-              loss='categorical_crossentropy',
-              metrics=['accuracy'])
+              loss='mse',
+              metrics=['mae'])
 
-
-history = model.fit(partial_x_train,
-                    partial_x_label,
-                    epochs=500,
-                    batch_size=128,
-                    validation_data=(x_val, y_val),
+num_epochs = 500
+all_histories = []
+history = model.fit(partial_train_data,
+                    partial_train_target,
+                    validation_data=(val_data, val_target),
+                    epochs=num_epochs,
+                    batch_size=1,
                     verbose=0)
 
 
-hists = [history]
-hist_df = pd.concat([pd.DataFrame(hist.history) for hist in hists])
-hist_df.index = np.arange(1, len(hist_df)+1)
+hists = history.history['val_mean_absolute_error']
+all_histories.append(hists)
 
-fig, ax = plt.subplots(2, 1, figsize=(10, 10))
-ax[0].plot(hist_df.val_acc, lw=5, label= 'V_Acc')
-ax[0].plot(hist_df.acc, lw=5, label='T_Acc')
-ax[0].set_ylabel('Acc')
-ax[0].set_xlabel('Epoch')
-ax[0].grid()
-ax[0].legend(loc=0)
+average_ame_history = [np.mean([x[i] for x  in all_histories]) for i in range(num_epochs)]
 
+# 두 그래프 하나로 그리기 찾아야 함....
+# fig, x = plt.subplots(1, 2, figsize=(10, 16))
 
-ax[1].plot(hist_df.val_loss, lw=5, label= 'V_Loss')
-ax[1].plot(hist_df.loss, lw=5, label='T_loss')
-ax[1].set_ylabel('loss')
-ax[1].set_xlabel('Epoch')
-ax[1].grid()
-ax[1].legend(loc=0)
+# plt.plot(range(1, len(average_ame_history) + 1), average_ame_history)
+# plt.xlabel('Epochs') 
+# plt.ylabel('Validation MAE')
+
+def smooth_curve(points, factor=0.9):
+    smoothed_points = []
+    for point in points:
+        if smoothed_points:
+            previous = smoothed_points[-1]
+            smoothed_points.append(previous * factor + point * (1-factor))
+        else:
+            smoothed_points.append(point)
+    return smoothed_points
+
+smoothed_mae_history = smooth_curve(average_ame_history)
+
+plt.plot(range(1, len(smoothed_mae_history)+1 ), smoothed_mae_history)
+plt.xlabel('Epochs')
+plt.ylabel('Validation MAE')
 plt.show()

@@ -17,8 +17,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # type 변경을 몰라서 입력을 float으로  입력
-x_train = np.array([1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0])
-x_target = np.array([1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0])
+# x_train = np.array([1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0])
+# x_target = np.array([1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0])
+x_train = np.array([1,2,3,4,5,6,7,8,9]).astype('float32')
+x_target = np.array([1,2,3,4,5,6,7,8,9]).astype('float32')
 
 mean = x_train.mean(axis=0)
 x_train -= mean
@@ -68,8 +70,8 @@ model.summary()
 
 model.compile(optimizer='rmsprop',
               loss='mse',
-            #   metrics=['mae'])
-            metrics=['mse'])
+              metrics=['mae'])
+
 
 num_epochs = 500
 all_histories = []
@@ -87,11 +89,13 @@ all_histories.append(hists)
 average_ame_history = [np.mean([x[i] for x  in all_histories]) for i in range(num_epochs)]
 
 # 두 그래프 하나로 그리기 찾아야 함....
-# fig, x = plt.subplots(1, 2, figsize=(10, 16))
+# fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 16))
 
-# plt.plot(range(1, len(average_ame_history) + 1), average_ame_history)
-# plt.xlabel('Epochs') 
-# plt.ylabel('Validation MAE')
+# graph 1
+plt.subplot(121) # 1,2 의 첫번째
+plt.plot(range(1, len(average_ame_history) + 1), average_ame_history)
+plt.xlabel('Epochs') 
+plt.ylabel('Validation MAE')
 
 def smooth_curve(points, factor=0.9):
     smoothed_points = []
@@ -105,6 +109,8 @@ def smooth_curve(points, factor=0.9):
 
 smoothed_mae_history = smooth_curve(average_ame_history)
 
+# graph 2
+plt.subplot(122) #1,2 의 두번째
 plt.plot(range(1, len(smoothed_mae_history)+1 ), smoothed_mae_history)
 plt.xlabel('Epochs')
 plt.ylabel('Validation MAE')

@@ -68,7 +68,8 @@ model.summary()
 
 model.compile(optimizer='rmsprop',
               loss='mse',
-              metrics=['mae'])
+            #   metrics=['mae'])
+            metrics=['mse'])
 
 num_epochs = 500
 all_histories = []

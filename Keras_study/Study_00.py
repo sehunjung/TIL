@@ -30,6 +30,9 @@ x_train /= std
 x_target -= mean
 x_target /= std
 
+# x_train -= np.mean(x_train)
+# x_train /= np.std(x_train)
+
 # print(x_target.shape)
 # print(x_target)
 

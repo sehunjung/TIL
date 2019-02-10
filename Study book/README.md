@@ -87,14 +87,26 @@ https://www.facebook.com/notes/%EC%8A%A4%EC%82%AC%EB%AA%A8-%ED%95%9C%EA%B5%AD-%E
 
 https://tykimos.github.io/2019/12/31/2019_1st_ML_month_with_KaKR/?fbclid=IwAR3TIY4cnzcLJ9selHCweNbP5tiRdoH1nWvXqidyARScECltTnsT1B9YEKw
 
-**블록과 함께하는 파이썬 딥러닝 케라스 \
+**블록과 함께하는 파이썬 딥러닝 케라스\
 http://www.yes24.com/24/goods/49867702?scode=032&OzSrank=4
-
 
 코랩 구글드라이브 파일 연결\
 https://colab.research.google.com/
 https://tykimos.github.io/2019/01/22/colab_getting_started/
 
+
+** 케라스 스터디 추천책\
+모두의 딥러닝  
+http://www.yes24.com/24/goods/57736119?scode=032&OzSrank=1
+
+블록과 함께하는 파이썬 딥러닝 케라스\
+http://www.yes24.com/24/goods/49867702?scode=032&OzSrank=4
+
+딥러닝 모델 설계를 떠받치는 기술\
+http://www.yes24.com/24/Goods/68799500?Acode=101
+
+파이썬 라이브러리를 활용한 머신러닝-사이킷런 핵심 개발자가 쓴 머신러닝\
+http://www.yes24.com/24/Goods/42806875
 ---
 **인공지능을 위한 수학 - 꼭 필요한 것만 골라 배우는 인공지능 맞춤 수학 \
 http://www.yes24.com/24/goods/66913718

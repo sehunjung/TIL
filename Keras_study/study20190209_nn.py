@@ -10,8 +10,8 @@ y = np.array([1,2,3,4,5,6,7,8,9,10])
 # np.array(range(1,11))
 
 # 모델의 인풋/아웃풋 shape, dimension이 중요하다.
-print(x.shape)
-print(type(x))
+print("x shape:", x.shape)
+print("x type", type(x))
 
 # 트레인/테스트 7:3
 x_train = x[:7]
@@ -20,8 +20,8 @@ x_test = x[7:]
 y_test =y[7:]
 
 
-print(x_train)
-print(x_test)
+print("x_trin:", x_train, x_train.shape)
+print("x_test:", x_test, x_test.shape)
 
 
 # 모델 구성

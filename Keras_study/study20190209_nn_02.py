@@ -7,7 +7,7 @@ from keras.layers.convolutional import Conv2D
 from keras.layers.pooling import MaxPooling2D
 from keras.layers.merge import concatenate
 import numpy as np
-
+import pandas as pd
 
 x1 = np.array(range(1,11))
 y1 = np.array(range(1,11))
@@ -16,19 +16,22 @@ x2 = np.array(range(101,111))
 y2 = np.array(range(101,111))
 # np.array(range(1,11))
 
-# print("x shape :", x.shape)
-# print("x type :" , type(x))
-# print("x dim :" , x.ndim)
+z =  np.hstack([x1, x2])
 
-x1_train = x1[:7]
-y1_train = y1[:7]
-x1_test = x1[7:]
-y1_test =y1[7:]
+print("x shape :", x1.shape)
+print("x type :" , type(x1))
+print("x dim :" , z.ndim)
+print(z, x1)
 
-x2_train = x2[:7]
-y2_train = y2[:7]
-x2_test = x2[7:]
-y2_test = y2[7:]
+# x1_train = x1[:7]
+# y1_train = y1[:7]
+# x1_test = x1[7:]
+# y1_test =y1[7:]
+
+# x2_train = x2[:7]
+# y2_train = y2[:7]
+# x2_test = x2[7:]
+# y2_test = y2[7:]
 
 # input layer
 visible1 = Input(shape=(1,))
@@ -54,10 +57,8 @@ model.compile(loss='mse', optimizer='adam', metrics=['mse'])
 # summarize layers
 print(model.summary())
 
-#????????????????????????
-model.fit([x1_train, x2_train], [y1_train, y2_train], 
-            epochs=200, batch_size=1, 
-            validation_data=([x1_test, x2_test], [y1_test, y2_test]))
+model.fit([x1, x2], z, 
+            epochs=200, batch_size=1)
 
 # model.fit(x_train, y_train, epochs=200, batch_size=1, validation_data=(x_test, y_test), verbose=0)
 

@@ -39,14 +39,14 @@ model.compile(loss='mse', optimizer='adam', metrics=['mse'])
 # model.summary()
 print(model.summary())
 
+
 #?????????????????
 model.fit([x1_train, x2_train], [y1_train, y2_train], 
         epochs=200, 
         batch_size=1,
         validation_data=([x1_test, x2_test], [y1_test, y2_test]))
-
-# model.fit(x_train, y_train, epochs=200, batch_size=1, validation_data=(x_test, y_test), verbose=0)
 '''
+# model.fit(x_train, y_train, epochs=200, batch_size=1, validation_data=(x_test, y_test), verbose=0)
 a, b = model.evaluate(x_test, y_test, batch_size=1)
 print("Loss :", a, "MSE : ", b)
 

@@ -57,8 +57,12 @@ https://okky.kr/article/538535
 
 ---
 
-테스트 주도 개발로 배우는 객체 지향 설계와 실천 [스티브 프리먼, 냇 프라이스]
+테스트 주도 개발로 배우는 객체 지향 설계와 실천 [스티브 프리먼, 냇 프라이스]\
+http://www.yes24.com/24/goods/9008455?scode=032&OzSrank=1\
 
+데이터 중심 애플리케이션 \
+- 설계 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 시스템을 지탱하는 핵심 아이디어\
+http://www.yes24.com/24/goods/59566585?scode=032&OzSrank=1
 
 코딩 인터뷰 완전 분석\
 http://www.yes24.com/24/goods/44305533?
@@ -67,8 +71,8 @@ http://www.yes24.com/24/goods/44305533?
 스파크 완벽가이드 \
 https://www.facebook.com/zzsza/posts/1657991877635881
 
-
-러닝 스파크 http://www.yes24.com/24/Goods/21667835?Acode=101&fbclid=IwAR3LcKjq06WjkbPlzi9hL4CSeePiyreJOWBPJ8JiOQdYyhX8IMS2W8yv9HU
+러닝 스파크 \
+http://www.yes24.com/24/Goods/21667835?Acode=101&fbclid=IwAR3LcKjq06WjkbPlzi9hL4CSeePiyreJOWBPJ8JiOQdYyhX8IMS2W8yv9HU
 
 빅데이터 분석을 위한 스파크 2 프로그래밍\
 http://wikibook.co.kr/spark/
@@ -107,6 +111,7 @@ http://www.yes24.com/24/Goods/68799500?Acode=101
 
 파이썬 라이브러리를 활용한 머신러닝-사이킷런 핵심 개발자가 쓴 머신러닝\
 http://www.yes24.com/24/Goods/42806875
+
 ---
 **인공지능을 위한 수학 - 꼭 필요한 것만 골라 배우는 인공지능 맞춤 수학 \
 http://www.yes24.com/24/goods/66913718

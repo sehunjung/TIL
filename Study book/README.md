@@ -42,6 +42,8 @@ http://www.yes24.com/24/Goods/57670268?Acode=101
 **파이썬 라이브러리를 활용한 머신러닝 사이킷런 핵심 개발자가 쓴 머신러닝 - 케글추천 \
 http://www.yes24.com/24/Goods/42806875
 
+파이썬을 여행하는 히치하이커를 위한 안내서\
+http://www.yes24.com/24/Goods/55258117?Acode=101
 
 파이썬 웹 프로그래밍(django)
 - 기초 파이썬 웹 프로그래밍(http://www.yes24.com/24/Goods/63503495?Acode=101)

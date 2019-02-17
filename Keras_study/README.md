@@ -1,5 +1,6 @@
 
-# 케라스 스터디 1일차 
+# 케라스 스터디 1주차 
+
 - 참고도서 정리 
 - y = wx + b  이해 
 - 딥런닝의 의미 - 히든 레이어를 가진 뉴럴 네트웍 \
@@ -20,3 +21,22 @@
 ![](./IMG/keras_optimizer.jpg)
 
 
+# 케라스 스터디 2주차
+
+- 다중 입력 처리\
+np.transpose(), flatten(), np.concatenate()
+
+- 모델 합치기\
+merge1 = concatenate([dense1, dense2, dense3])
+
+
+- 함수형 API로 모델 만들기\
+input1 = Input(shape=(1,)) \
+dense1 = Dense(100, activation='relu')(input1)
+
+
+# 케라스 스터디 3주차
+
+- model/weights save, load
+- tensorboard 이용하기
+- weights 분석??

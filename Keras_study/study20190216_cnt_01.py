@@ -96,20 +96,30 @@ model.compile(loss='mse', optimizer='adam', metrics=['mse'])
 
 model.summary()
 
-# tensorboard log
+# tensorboard log for mac
+# tb_hist = keras.callbacks.TensorBoard(log_dir='./graph', histogram_freq=0, write_graph=True, write_images=True)
+
+# tensorboard log for win10
+from keras.callbacks import TensorBoard
 tb_hist = keras.callbacks.TensorBoard(log_dir='./graph', histogram_freq=0, write_graph=True, write_images=True)
+# 윈도우 실행시 vscode 아래 터미널 paht 위치에 저장됨.
 
 model.fit([x1_train, x2_train, x3_train], [y1_train, y2_train, y3_train] , epochs=100, batch_size=1,
           validation_data=([x1_test, x2_test, x3_test], [y1_test, y2_test, y3_test]), 
           callbacks = [tb_hist]) # tensorboard log 
+
+# weight 출력
+mw = model.get_weights()
+print(mw)
 
 
 #mac os keras.json 
 # cmd + shift + g => ~/.keras
 
 #DIR
-# /Users/sehun.jung/Downloads/TIL/Keras_study/graph
-# tensorboard --logdir=/Users/sehun.jung/Downloads/TIL/Keras_study/graph
+# /Users/sehun.jung/Downloads/TIL/Keras_study/graph   
+# mac : tensorboard --logdir=/Users/sehun.jung/Downloads/TIL/Keras_study/graph => log파일 보임
+# win10 : tensorboard --logdir ./graph  => 로그파일 안보임.
 # http://localhost:6006
 
 ## loss는 어떻게???
@@ -147,7 +157,7 @@ def RMSE(y12_test, y_predict):
 print("RMSE : ", RMSE((np.array([y1_test, y2_test, y3_test])).flatten(), y_predict))
 
 
-
+# model/weight 윈도우 실행시 vscode 아래 터미널 paht 위치에 저장됨.
 # model save
 from keras.models import load_model
 import json
@@ -156,6 +166,7 @@ import json
 model.save_weights('cnt_01_W.h5')
 with open('cnt_01.json', 'w') as f:
     f.write(model.to_json())
+
 
 #hdf5 binary format
 # model.save('cnt_01.h5')

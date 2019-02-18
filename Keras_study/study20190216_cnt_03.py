@@ -10,3 +10,7 @@ print("Key: ", list(f.keys()))
 
 # print(f['dense_1'].shape)
 # print(f['dense_1'][:])
+
+# w, b= model.get_weights()
+# print(w, b)
+

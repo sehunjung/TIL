@@ -121,6 +121,7 @@ print(mw)
 # /Users/sehun.jung/Downloads/TIL/Keras_study/graph   
 # mac : tensorboard --logdir=/Users/sehun.jung/Downloads/TIL/Keras_study/graph => log파일 보임
 # win10 : tensorboard --logdir ./graph  => 로그파일 안보임.
+# model/weight 윈도우 실행시 vscode 아래 터미널 paht 위치에 저장됨.
 # http://localhost:6006
 
 ## loss는 어떻게???
